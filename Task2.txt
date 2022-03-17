@@ -1,0 +1,8 @@
+---  #2nd Playbook
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: Install HTTPD on cent OS 7
+      action: yum name=httpd state=installed
